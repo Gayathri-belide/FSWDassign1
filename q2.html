@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Content</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id="randomImage" src="" alt="Random Image">
+        <p id="randomText">Random Text</p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get the current day of the week (0 = Sunday, 1 = Monday, ...)
+            const dayOfWeek = new Date().getDay();
+
+            // Define an array of image URLs
+            const images = [
+                "img2.jpeg","img3.jpeg","img4.jpeg","img5.jpeg","img6.jpeg","img7.jpeg"
+                // Add more image URLs as needed
+            ];
+
+            // Set the image source based on the day of the week
+            const randomImage = document.getElementById("randomImage");
+            randomImage.src = images[dayOfWeek % images.length];
+
+            // Define an array of text options
+            const textOptions = [
+                "Good morning!",
+                "Hello there!",
+                "Have a great day!",
+                // Add more text options as needed
+            ];
+
+            // Set the random text based on a random index
+            const randomText = document.getElementById("randomText");
+            randomText.textContent = textOptions[Math.floor(Math.random() * textOptions.length)];
+        });
+    </script>
+</body>
+</html>

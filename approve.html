@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+       {background-color: #00FFFF;}
+       button
+       {border-radius: 20px;
+            background-color: #FF00FF;
+            width:500px;
+            font-size:25px;
+            position:relative;
+            left:360px;
+            top:300px;
+            height:60px;}
+        p{ position:relative;
+            left:410px;
+            font-size:30px;
+        }
+        #dsply{
+            position:relative;
+            left:360px;
+            font-size:30px;
+    display:none;}
+    </style>
+</head>
+<body>
+    <p id="dataValue"></p>
+    <script>
+        // JavaScript to retrieve and display the data from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const dataValue = urlParams.get('endDate');
+        console.log(dataValue)
+        if (dataValue) {
+            document.getElementById('dataValue').textContent = dataValue;
+        }
+        localStorage.setItem("data", dataValue);
+    </script>
+
+<form action="comp.html" method="get">
+    <button id="hiddenButton" style="display:none;">Go to Next Step</button>
+    
+</form>
+    
+</body>
+</html>
+
+    <p >Your application is being verified</p>
+    <br><br><br><br>
+    <script>
+    setTimeout(myFunction, 4500);
+
+    function myFunction(){
+    var dsp = document.getElementById('dsply');
+    dsp.style.display='block';
+   
+    }
+</script>
+    
+    
+    
+    <div id="dsply">Your application is verified successfully</div>
+    <script>
+       function displayButtonAfterDelay() {
+            
+            var button = document.getElementById("hiddenButton");
+            setTimeout(function () {
+                button.style.display = "block"; 
+            }, 4500); 
+        }
+    </script>
+        <script> displayButtonAfterDelay();</script>
+
+        
+
+        
+       
+   
+</body>
+</html>

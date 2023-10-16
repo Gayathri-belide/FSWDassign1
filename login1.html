@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       *
+       {background-color: #00FFFF;}
+       #left{
+        float:left;
+       }
+       #con
+       {float:left;
+        margin:20px;
+       }
+       img{
+        float:right;
+        width:460px;
+        height:560px;
+       }
+       .flex-container
+       {
+        display:flex;
+       }
+       .f
+       { margin-left:30px;
+        flex:1.5;
+       }
+       .s
+       { margin:30px;
+        flex:1;
+       }
+       label{
+        font-size:40px;
+       }
+       #p
+       {
+        font-size:50px;
+       }
+       #em,#pass
+       {
+        height:45px;
+        width:440px;
+       }
+       #lb
+       {border-radius:8px;
+        background-color:#FF00FF;
+        color:whitesmoke;
+        width:445px;
+        height:60px;
+       }
+       #e
+       {
+        font-size:25px;
+       }
+       </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="f">
+            <p id="p"> Welcome to Internship Management Platform</p>
+            <p> Donot have an account?<span><a href="signup.html">Sign Up</a></span></p>
+            <form  action="home.html">
+                <label id="e">Email</label>
+                <br>
+                <input type="text" id="em"/>
+                <br>
+                <label id="e">Password</label>
+                <br>
+
+                <input type="password" id="pass"/>
+                <br>
+               <br>
+                <input type="submit" id="lb" value="Login"/>
+            </form>
+            <br><br>
+            <a href="aboutus.html">About us</a>
+            <a href="contactus.html">Contact us</a>
+        </div>
+        <div class="s">
+            <img src="limg.jpeg"/>
+        </div>  
+      </div>
+      
+</body>
+</html>
